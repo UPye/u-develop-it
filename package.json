@@ -1,16 +1,20 @@
 {
   "name": "u-develop-it",
   "version": "1.0.0",
-  "description": "",
+  "description": "Voting back-end api database",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "start": "node server.js",
+    "migrate": "sqlite3 db/election.db < db/schema.sql",
+    "seed": "sqlite3 db/election.db < db/seeds.sql",
+    "db": "sqlite3 db/election.db"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/UPye/u-develop-it.git"
   },
-  "author": "",
+  "author": "UPye",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/UPye/u-develop-it/issues"
@@ -18,7 +22,10 @@
   "homepage": "https://github.com/UPye/u-develop-it#readme",
   "dependencies": {
     "mysql2": "^2.2.5",
-    "sqlite3": "^5.0.2"
+    "sqlite3": "^5.0.2",
+    "express": "^4.17.1"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "jest": "^25.1.0"
+  }
 }
