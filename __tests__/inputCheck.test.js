@@ -6,6 +6,7 @@ test('inputCheck() returns null when all properties exist', () => {
   expect(inputCheck(obj, 'name')).toBe(null);
 });
 
+
 test('inputCheck() returns an object when a property is missing', () => {
   const obj = {name: 'alice', occupation: ''};
 

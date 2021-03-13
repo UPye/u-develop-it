@@ -10,6 +10,7 @@ module.exports = function(obj, ...props) {
       errors.push(`No ${prop} specified.`);
     }
   });
+  
 
   if (errors.length) {
     return {
